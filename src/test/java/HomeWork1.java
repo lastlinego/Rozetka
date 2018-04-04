@@ -18,8 +18,5 @@ public class HomeWork1 {
         driver.findElement(By.xpath("//button[@class='btn-link-i'][@name='auth_submit']")).click();
         Thread.sleep(5000);
         driver.quit();
-
     }
-
-
 }
