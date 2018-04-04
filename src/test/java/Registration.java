@@ -4,12 +4,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
-public class Registration {
-    WebDriver driver = new ChromeDriver();
+public class Registration extends BeforeAfter {
+
     @Test
     public void registration() throws InterruptedException {
-        driver.get("https://rozetka.com.ua/");
-        driver.manage().window().maximize();
         driver.findElement(By.xpath("//*[@id='header_user_menu_parent']")).click();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//span[@class='exponea-close']")).click();
@@ -20,6 +18,5 @@ public class Registration {
         driver.findElement(By.xpath("//button[@class='btn-link-i'][contains(text(),'Зарегистрироваться')]")).click();
         Thread.sleep(5000);
         Assert.assertTrue(driver.getTitle().contains("Личные данные"));
-        driver.quit();
     }
 }
