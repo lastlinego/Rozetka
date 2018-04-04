@@ -16,4 +16,8 @@ public class CreditElements extends BeforeAfter {
     public void creditTableTitle() throws InterruptedException {
         Assert.assertTrue(driver.findElement(By.xpath("//h2[contains(text(),'Условия кредитования')]")).getText().contains("Условия кредитования"));
     }
+    @Test
+    public void creditTableData() throws InterruptedException {
+
+    }
 }
